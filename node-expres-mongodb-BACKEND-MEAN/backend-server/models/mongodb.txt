@@ -1,1 +1,5 @@
 como luce mongo
+npm install -D
+
+//para que el usuario vea por consola lo que estan pidiendo
+npm install morgan
