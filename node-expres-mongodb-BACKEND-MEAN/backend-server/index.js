@@ -1,4 +1,5 @@
 //config server//first I need run NODEJS
+//node backend-server/index.js
 const express = require('express');
 const app = express();
 
@@ -6,7 +7,7 @@ const app = express();
 
 
 //SETTINGS
-app.set('port', 3000);
+app.set('port', process.env.PORT || 5000);
 
 //MIDDELEWARES
 
@@ -14,6 +15,6 @@ app.set('port', 3000);
 
 
 //STARTING THE SERVER
-app.listen(3000, ()=>{
-     console.log('Server on port 3000');
-})
+app.listen(app.get('port'), ()=>{
+     console.log('Server on port', app.get('port'));
+});
